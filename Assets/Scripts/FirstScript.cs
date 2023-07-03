@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    int score = 10;
+    public int score = 10;
     float speed = 2.5f;
     char character = 'A'; // consists of one letter
-    string name = " Albert ";
+    public string name = " Albert "; // so now we can use this variables outside of this script meanwhile value of this variable can be changed in the inspector
 
 
     // Start is called before the first frame update
@@ -15,7 +15,8 @@ public class FirstScript : MonoBehaviour
     {
         // print (10);
         // print (score);
-        print (name);
+        print ("My name is: " + name);
+        print ("My current score is: " + score);
     }
 
     // Update is called once per frame
