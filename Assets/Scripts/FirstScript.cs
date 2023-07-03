@@ -5,12 +5,19 @@ using UnityEngine;
 public class FirstScript : MonoBehaviour
 {
 
-    public float speed;
+    // public int number;
+
+    public string MyName;
 
     // Start is called before the first frame update
     void Start()
     {
-        TestFunction();
+       // int returnedNumber = GiveDouble(5);
+       // print (returnedNumber);
+
+       // PrintName("Albert");
+       PrintName(MyName);
+
     }
 
     // Update is called once per frame
@@ -19,15 +26,28 @@ public class FirstScript : MonoBehaviour
 
     }
 
-    // single comment
-    /* multiline comment */ 
+    /*
+    int GiveDouble() // function will always return int
+    {
+        return (number * 2);
+    }
+    */
+
+    int GiveDouble(int val)
+    {
+        return (val * 2);
+    }
+
+    void PrintName( string name )
+    {
+        print ("My name is " + name);
+    }
+
+
 
     void TestFunction() // we don't want function to return anything
     {
-        print ("Shoot");
-        print ("Destroy");
-        print ("Move");
-        transform.Translate(speed, 0, 0);
+
     }
 
 }
