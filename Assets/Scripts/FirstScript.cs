@@ -10,15 +10,23 @@ public class FirstScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // print ("Car Move!"); - called only once at the beginning
-
-        
+        TestFunction();
     }
 
     // Update is called once per frame
     void Update()
     {
-        print ("Car Move!"); // keeps moving every time
+
+    }
+
+    // single comment
+    /* multiline comment */ 
+
+    void TestFunction() // we don't want function to return anything
+    {
+        print ("Shoot");
+        print ("Destroy");
+        print ("Move");
         transform.Translate(speed, 0, 0);
     }
 
