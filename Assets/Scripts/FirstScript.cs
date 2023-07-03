@@ -4,48 +4,29 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-
-    // public int number;
-
-    public string MyName;
+    public int score;
 
     // Start is called before the first frame update
     void Start()
     {
-       // int returnedNumber = GiveDouble(5);
-       // print (returnedNumber);
 
-       // PrintName("Albert");
-       PrintName(MyName);
+        if ( score <= 0 ) {
+            print ("Game Over!");
+        }
+        else if ( score > 0 && score < 10 ) {
+            print ("Level 1");
+        }
+        else if ( score > 10 ) {
+            print ("Level 2");
+        }
+        else {
+            print ("Game is Running!");
+        }
 
     }
 
     // Update is called once per frame
     void Update()
-    {
-
-    }
-
-    /*
-    int GiveDouble() // function will always return int
-    {
-        return (number * 2);
-    }
-    */
-
-    int GiveDouble(int val)
-    {
-        return (val * 2);
-    }
-
-    void PrintName( string name )
-    {
-        print ("My name is " + name);
-    }
-
-
-
-    void TestFunction() // we don't want function to return anything
     {
 
     }
