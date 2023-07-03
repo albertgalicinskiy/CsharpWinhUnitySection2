@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    public int score;
+
+    // int a = 5;
+    public string name;
 
     // Start is called before the first frame update
     void Start()
     {
+        /*
+        if ( a == 5 ) {
+            print ("A is 5");
+        }
+        */
 
-        if ( score <= 0 ) {
-            print ("Game Over!");
-        }
-        else if ( score > 0 && score < 10 ) {
-            print ("Level 1");
-        }
-        else if ( score > 10 ) {
-            print ("Level 2");
+        if ( name == "Albert" ) {
+            print (" You are Albert ");
         }
         else {
-            print ("Game is Running!");
+            print (" You are not Albert, Your are " + name + "!");
         }
+
 
     }
 
