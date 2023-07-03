@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-    public int score = 10;
-    float speed = 2.5f;
-    char character = 'A'; // consists of one letter
-    public string name = " Albert "; // so now we can use this variables outside of this script meanwhile value of this variable can be changed in the inspector
 
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        // print (10);
-        // print (score);
-        print ("My name is: " + name);
-        print ("My current score is: " + score);
+        // print ("Car Move!"); - called only once at the beginning
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        print ("Car Move!"); // keeps moving every time
+        transform.Translate(speed, 0, 0);
     }
 
 }
