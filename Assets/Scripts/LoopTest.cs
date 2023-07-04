@@ -10,16 +10,37 @@ public class LoopTest : MonoBehaviour
     }
     */
 
+    /*  Basic structure of While Loop
+
+    initialize/counter outside
+    while ( Condition ) {
+        // Do things
+
+        Increment value
+    }
+    */
+
     // Start is called before the first frame update
     void Start()
     {
-        print ("Before Entering For Loop");
+//        print ("Before Entering For Loop");
+//        for ( int i = 1 ; i < 11 ; i++ ) {
+//            print ("Albert");
+//        }        
+//        print ("After Exiting For Loop");
 
-        for ( int i = 1 ; i < 11 ; i++ ) {
-            print ("Albert");
-        }        
+        print ("Before Entering While Loop");
 
-        print ("After Exiting For Loop");
+        int i = 1;
+
+        while ( i <= 10 ) {
+            // print ("Albert");
+            print(i);
+
+            i++;
+        }
+
+        print ("After Exiting While Loop");
     }
 
     // Update is called once per frame
