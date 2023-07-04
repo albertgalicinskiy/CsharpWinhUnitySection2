@@ -5,24 +5,33 @@ using UnityEngine;
 public class FirstScript : MonoBehaviour
 {
 
-    // int a = 5;
-    public string name;
+    bool playing = true;
+
+    bool gameOver = true;
+    
+    public bool killPlayer; // in the Unity Inspector we will see checkbox
 
     // Start is called before the first frame update
     void Start()
     {
-        /*
-        if ( a == 5 ) {
-            print ("A is 5");
-        }
-        */
-
-        if ( name == "Albert" ) {
-            print (" You are Albert ");
+        
+        if (playing) // or this one is the same ( playing == true )
+        {
+            print ("Playing");
         }
         else {
-            print (" You are not Albert, Your are " + name + "!");
+            print ("Game Over");
         }
+        
+
+        
+        if ( !gameOver ) { // the same is ( gameOver == false ) // (gameOver) {
+            print ("Game Over");
+        }
+        else {
+            print ("Playing");
+        }
+        
 
 
     }
@@ -30,7 +39,11 @@ public class FirstScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (killPlayer) {
 
+            Destroy(gameObject, 2f); // Destroy game object that has this script is atached, 2f = 2 sec
+
+        }
     }
 
 }
