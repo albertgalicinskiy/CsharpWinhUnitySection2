@@ -5,25 +5,19 @@ using UnityEngine;
 public class ArrayTest : MonoBehaviour
 {
 
-    public int[] rollNumber;
+    public GameObject[] objects;
 
-    string[] names = new string[4];
+    public Color[] colors;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Destroy( objects[2] ); // destroy element with index 2
 
-        names[0] = "Albert";
-        names[1] = "Alba";
-        names[2] = "Alberto";
-        names[3] = "Albertinho";
-
-        print ( names[3] );
-        print ( names[0] );
-
-
-        print (rollNumber[2]);
-        print ( rollNumber.Length );
+        objects[0].GetComponent<Renderer>().material.color = colors[1]; // change color for 1nd elemnt of objects array
+        objects[1].GetComponent<Renderer>().material.color = colors[0]; // change color for 2nd elemnt of objects array
+        objects[2].GetComponent<Renderer>().material.color = colors[0]; // change color for 3rd elemnt of objects array
+        objects[3].GetComponent<Renderer>().material.color = colors[2]; // change color for 4th elemnt of objects array
     }
 
     // Update is called once per frame
